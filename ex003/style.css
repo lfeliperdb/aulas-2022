@@ -1,0 +1,135 @@
+body {
+    margin: 0em;
+    background-image: url(img/Lindo\ Amanhecer\ na\ Floresta\ Wallpaper.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+#pag {
+    width: 1000px;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    background-color: rgb(88, 88, 88);
+}
+header {
+    background-image: url(img/Sem\ título.png);
+    background-color: rgb(32, 32, 32);
+    background-size: 100% 100%;
+    color: rgb(255, 255, 255);
+    height: 11em;
+    max-width: 100%;
+    padding: 1.4em;
+    text-align: right;
+}
+header h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+}
+header p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+}
+nav {
+    background-color: #1C2618;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    padding: 2em;
+    max-width: 100%;
+    font-weight: bolder;
+    height: 5em;
+}
+section {
+    background-color: #25321F;
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 1em;
+    max-width: 100%;
+    padding: 1em;
+}
+footer {
+    background-color: #2F3F27;
+    color: rgb(255, 255, 255);
+    min-height: 1em;
+    max-height: 100em;
+    padding: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 8px;
+}
+#popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    color: white;
+    background-color: rgba(3, 170, 182, 0);
+}
+    #fechar {
+        position: absolute;
+        right: 80px;
+        top: 5px;
+        height: 30px;
+        color: rgb(255, 255, 255);
+        font-size: 3em;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        cursor: pointer;
+    }
+    #quadro {
+        width: 40%;
+        margin: 15% auto;
+        text-align: center;
+        background-color: #131910;
+        padding: 5%;
+        border-radius: 10px;
+    }
+    #popup input {
+        width: 100%;
+        padding: 2%;
+        margin-bottom: 3%;
+    }
+    #quadro a{
+        text-decoration: none;
+    }
+    #quadro a:hover {
+        text-decoration: underline;
+    }
+    #msg {
+        color: brown;
+        display: none;
+    }
+
+    ul li{
+        float: left;
+        width: 30%;
+        background-color: #055200;
+        margin-left: 1em;
+        text-align: center;
+        list-style: none;
+    }
+    ul li:hover{
+        background-color: #087A00;
+    }
+    ul li a{
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 1em;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+    ul li a:hover{
+       color: white;
+    }
+    #ong{
+        font-size: 20px;
+    }
+    #lk{
+        font-size: 25px;
+        color: white;
+    }
