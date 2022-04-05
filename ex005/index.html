@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <section id="pag">
@@ -27,6 +30,83 @@
                 <p id="erro">* As senhas não conferem </p> 
                 <!--Exibir e ocultar de acordo com a confirmação de senha -->
             </fieldset>
+            <fieldset>
+                <legend> Dados de Pagamento </legend>
+
+                <p> Tipo de Acesso </p>
+                <input type="radio" value="aa" name="pessoa">
+                <label for="pessoa">Pessoa Física</label>
+                <input type="radio" value="aa" name="pessoa">
+                <label for="pessoa">Pessoa Jurídica</label>
+                <br>
+                <label for="cpf">CPF:</label>
+                <input type="text" placeholder="xxx-xxx-xxx.xx">
+
+                <label for="cnpj" id="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" placeholder="00.000.000/0000-00">
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" placeholder="(xx) xxxxx-xxxx">
+
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select name="pagamento" id="pagamento">
+                    <option value="din">Dinheiro</option>
+                    <option value="car">Cartão</option>
+                    <option value="che">Cheque</option>
+                </select>
+                <fieldset id="cart">
+                    <legend>Cartão</legend>
+                    
+                    <label for="numero">Nº do Cartão:</label>
+                    <input type="text" placeholder="0000 0000 0000 0000">
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" placeholder="xxx">
+
+                    <label for="vencimento">Data de Vencimento:</label>
+                    <input type="date">
+                </fieldset>
+            </fieldset>
+
+            <fieldset>
+                <legend>Produtos</legend>
+
+                <table align="center" class="tabela" cellpadding="20">
+                    <tr>
+                        <td>Web Cam</td>
+                        <td>R$ 300,00</td>
+                        <td><input type="number" name="qtd" min="0" max="9"></td>
+                        <td><input type="text" name="tot"></td>
+                    </tr>
+                    <tr>
+                        <td>Placa de Vídeo</td>
+                        <td>R$ 700,00</td>
+                        <td><input type="number" name="qtd2" min="0" max="9"></td>
+                        <td><input type="text" name="tot2"></td>
+                    </tr>
+                    <tr>
+                        <td>Placa Mãe</td>
+                        <td>R$ 650,00</td>
+                        <td><input type="number" name="qtd3" min="0" max="9"></td>
+                        <td><input type="text" name="tot3"></td>
+                    </tr>
+                    <tr>
+                        <td>HD Externo</td>
+                        <td>R$ 299,00</td>
+                        <td><input type="number" name="qtd4" min="0" max="9"></td>
+                        <td><input type="text" name="tot4"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" align="right">
+                            <h3>Total ➝ R$ 0,00</h3>
+                            <h3>Desconto ➝ R$ 0,00</h3>
+                            <h3>Valor à Pagar ➝ R$ 0,00</h3>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <input type="submit" value="Finalizar">
         </form>
     </section>
     <script src="js/script.js//"></script>

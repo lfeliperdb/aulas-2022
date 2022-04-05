@@ -1,6 +1,7 @@
 body{
     background-color: rgb(1, 0, 73);
     color: rgb(0, 22, 148);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #pag{
@@ -55,8 +56,20 @@ legend{
     color: beige;
     padding: 2%;
     width: 50%;
+    border-radius: 10px;
 }
 
 #msg{
+    display: none;
+}
+#cart {
+    display: none;
+}
+
+header{
+    font-size: xx-large;
+    font-weight: bold;
+}
+#cnpj{
     display: none;
 }
