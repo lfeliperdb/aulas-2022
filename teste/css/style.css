@@ -36,7 +36,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #8a0000;
+    color: #ff0000;
 }
 
 nav a{
@@ -52,13 +52,13 @@ nav a{
 
 .texto-destaque h1{
     font-size: 2.3em;
-    color: #423e34;
+    color: #515353;
 }
 
 .texto-destaque p{
-    color: #515353;
+    color: #1f2022;
     font-size: 1em;
-    line-height: 2.5;
+    line-height: 2;
 }
 
 .galeria{
@@ -87,7 +87,7 @@ nav a{
 }
 
 .sobre{
-    background-color: #423e34;
+    background-color: #515353;
     background-image: url(../img/detalhe.png);
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -134,7 +134,7 @@ nav a{
 }
 
 .rodape{
-    background-color: #423e34;
+    background-color: #515353;
     padding: 25px;
     color: white;
     text-align: center;
