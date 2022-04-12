@@ -39,10 +39,51 @@ function calculos(form) {
 }
 
 function confirma(form) {
-    total = form.total.value;
+    apagar = form.apagar.value;
 
-    if (form.login.value == "");
-    alert("O campo nome é obrigatório.");
-    form.login.focus();
-    return false;
+    if (form.login.value == ""){
+        alert("O campo nome é obrigatório.");
+        form.login.focus();
+        return false; 
+    } else if(form.senha1.value == "") {
+        alert("O campo senha é obrigatório.");
+        form.senha1.focus();
+        return false;
+    } else if (form.senha1.value != form.senha2.value) {
+        alert("As senhas não coincidem.");
+        form.senha2.focus();
+        return false;
+    } else if ((quant1 == 0) && (quant2 == 0) && (quant3 == 0) && (quant4 == 0)) {
+        alert("Selecione 1 produto.")
+        form.quant1.focus();
+        return false;
+    } else{
+        if(confirm("Confirme o envio do orçamento o valor de " + apagar)) {
+            alert("Orçamento enviado com sucesso!");
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+
+function senha() {
+    senha1 = document.orcamento.senha1.value;
+    senha2 = document.orcamento.senha2.value;
+    
+    if (senha1 != senha2) {
+        document.getElementById("msg").style.display = "block";
+    } else {
+        document.getElementById("msg").style.display = "none";
+    }
+}
+
+function pessoa(obj) {
+    if (obj == "pf") {
+        document.getElementById('cpf').style.display = "block";
+        document.getElementById('cnpj').style.display = "none";
+    } else {
+        document.getElementById('cpf').style.display = "none";
+        document.getElementById('cnpj').style.display = "block";
+    }
 }

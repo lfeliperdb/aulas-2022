@@ -57,6 +57,10 @@ legend{
    width: 50%; 
 }
 
-#msg{
+#msg, #cartao, #cnpj{
     display: none;
+}
+
+#msg{
+    color: red;
 }

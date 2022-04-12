@@ -11,7 +11,7 @@
     <section id="pag">
         <header> Orçamento </header>
         <hr>
-        <form method="post" name="orcamento" id="orcamento" oninput="calculos(this)" onsubmit="return confirma(this)">
+        <form method="post" name="orcamento" id="orcamento" oninput="calculos(this)" onsubmit="return confirma (this)" novalidate action="envio.html">
             <fieldset>
                 <legend> Dados de Acesso </legend>
 
@@ -31,8 +31,9 @@
             <fieldset>
                 <legend> Dados de Pagamento </legend> 
                 <label for="usuario"> Tipo de Acesso </label> <div class="clear"></div>
-                <input type="radio" name="tipo" value="Pessoa Física" checked> <label> Pessoa Física </label>
-                <input type="radio" name="tipo" value="Pessoa Jurídica"> <label> Pessoa Jurídica </label>
+                <input type="radio" name="tipo" value="Pessoa Física" checked onchange="pessoa('pf')"> 
+                <label for="pessoa"> Pessoa Física </label>
+                <input type="radio" name="tipo" value="Pessoa Jurídica" checked onchange="pessoa('pj')"> <label for="pessoa"> Pessoa Jurídica </label>
                 <div class="clear"></div>
                 
                 <div id="cpf">
