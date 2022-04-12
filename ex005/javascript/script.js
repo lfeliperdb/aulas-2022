@@ -26,7 +26,7 @@ function calculos(form) {
 
     total = tot1 + tot2 + tot3 + tot4;
     desconto = total * perc;
-    
+    apagar = total - desconto;
     
     //saída de dados
 
@@ -85,5 +85,45 @@ function pessoa(obj) {
     } else {
         document.getElementById('cpf').style.display = "none";
         document.getElementById('cnpj').style.display = "block";
+    }
+}
+function mascara_cpf(obj) {
+    if (obj.value.length == 3) {
+    obj.value += "."; 
+    }
+    else if (obj.value.length == 7) {
+        obj.value += "."; 
+        
+    }
+    else if (obj.value.length == 11) {
+        obj.value += "-"; 
+    }
+}
+function salto(campo,digito) {
+    if (campo == "cpf") {
+        if(digito.length > 13) {
+            document.orcamento.telefone.focus()
+        }
+    }
+}
+function mascara_telefone(obj){
+    if (obj.value.length == 0) {
+        obj.value += "("; 
+        }
+    else if (obj.value.length == 3) {
+            obj.value += ")"; 
+            
+    }
+    else if (obj.value.length == 8) {
+        obj.value += "-"; 
+    }
+}
+function pay(obj) {
+    if (obj == "card") {
+        document.getElementById('cartao').style.display = "block";
+        document.getElementById('cartao').style.display = "none";
+    } else{
+        document.getElementById('cartao').style.display = "none";
+        document.getElementById('cartao').style.display = "block";
     }
 }
