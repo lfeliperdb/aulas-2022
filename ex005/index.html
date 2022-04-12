@@ -1,80 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https: //fonts.googleapis.com/css2? family= Roboto:wght@100;400 & display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Auto Shop</title>
+    <title>Form</title>
 </head>
-
 <body>
+    <section id="pag">
+        <header> Orçamento </header>
+        <hr>
+        <form method="post" name="orcamento" id="orcamento" oninput="calculos(this)" onsubmit="return confirma(this)">
+            <fieldset>
+                <legend> Dados de Acesso </legend>
 
-    <main>
-        <header>
-            <img class="imgLogo" src="img/logo.png" alt="Logo AutoShop">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#destaque">Carros</a></li>
-                    <li><a href="#ctt">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
+                <label for="login"> Login </label>
+                <input type="text" name="login" required>
 
-        <img class="imgDestaque" src="img/ferrari.webp" alt="Casa Modelo">
+                <label for="senha1"> Senha </label>
+                <input type="password" name="senha1" required>
 
-        <section class="destaque" id="destaque">
-            <article class="texto-destaque">
-                <h1>Carros de Luxo</h1>
-                <p>
-                    Ao contrário da crença popular, os veículos de luxo podem vir de qualquer marca. Para ser considerado um carro de luxo, o veículo deve ter recursos de alto nível que vão além das necessidades médias.
-                    O termo luxo é usado para categorizar veículos que estão equipados com melhores capacidades de desempenho, interiores luxuosos e todos os últimos recursos de segurança e tecnologia. No passado, certas marcas como Mercedes-Benz, BMW e Audi eram conhecidas como veículos de luxo. No entanto, hoje em dia existem modelos de luxo disponíveis para as marcas mainstream, como a Toyota e a Honda.
-                </p>
-            </article>
-        </section>
+                <label for="senha2"> Confirmar de Senha </label>
+                <input type="password" name="senha2" required>
 
-        <section class="galeria">
-            <article class="galeria-imagem">
-                <a href="img/lambo.jpg"><img src="img/minilambo.jpg" alt="Casa perto do rio"></a>
-                <p class="galeria-titulo">Lamborghini</p>
-                <p class="galeria-conteudo">Luxo e Alto Desempenho</p>
-            </article>
+                <p id="msg"> * As senhas não conferem </p>
+                <!-- Exibir e ocultar de acordo com a confirmação de senha -->
+            </fieldset>
 
-            <article class="galeria-imagem">
-                <a href="img/porsche.jpg"><img src="img/miniporsche.png" alt="Casa no campo"></a>
-                <p class="galeria-titulo">Porsche</p>
-                <p class="galeria-conteudo">Esportividade e Conforto</p>
-            </article>
+            <fieldset>
+                <legend> Dados de Pagamento </legend> 
+                <label for="usuario"> Tipo de Acesso </label> <div class="clear"></div>
+                <input type="radio" name="tipo" value="Pessoa Física" checked> <label> Pessoa Física </label>
+                <input type="radio" name="tipo" value="Pessoa Jurídica"> <label> Pessoa Jurídica </label>
+                <div class="clear"></div>
+                
+                <div id="cpf">
+                    <label for="cpf"> CPF </label>
+                    <input type="text" name="cpf" placeholder="xxx.xxx.xxx-xx">
+                </div>
+                
+                <div id="cnpj">
+                    <label for="cnpj"> CNPJ </label>
+                    <input type="text" name="cnpj" placeholder="xx.xxx.xxx/xxxx-xx">
+                </div>                   
+                
+                <label for="telefone"> Telefone </label>
+                <input type="tel" name="telefone" placeholder="(xx)xxxx-xxxx">
+                <label for="pagamento"> Forma de Pagamento </label>
+                <select name="pagamento">
+                    <option value="dinheiro"> Dinheiro </option>
+                    <option value="cartão"> Cartão </option>
+                    <option value="cheque"> Cheque </option>
+                </select>
+                <div id="cartao">
+                    <fieldset>
+                        <legend> Cartão</legend>
 
-            <article class="galeria-imagem">
-                <a href="img/maserati.webp"><img src="img/minimaserati.png" alt="Casa no campo"></a>
-                <p class="galeria-titulo">Maserati</p>
-                <p class="galeria-conteudo">Elegância e Potência</p>
-            </article>
-        </section>
+                        <label for="num"> Nº do Cartão </label>
+                        <input type="text" name="num">
 
-        <section class="sobre" id="sobre">
-            <h2>Vantagens dos <br> carros de luxo </h2>
-            <p>Um carro de luxo é um veículo indicado para o consumidor que tem perfil mais exigente e busca por características que só um modelo premium pode oferecer. Além da questão do status, dirigir um modelo de alto padrão oferece muitos outros benefícios</p>
-        </section>
+                        <label for="cod"> Código Segurança </label>
+                        <input type="text" name="cod">
 
- 
-        <section class="ctt" id="ctt">
-            <address>Entre em contato conosco <br> 40028922 </address>
-        </section>
-        <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7349.970402003543!2d-43.23159160176628!3d-22.91391668973826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e5bfcef45a7%3A0x3c044ac8f75ca717!2sMaracan%C3%A3%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1649200511794!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+                        <label for="vencimento"> Vencimento </label>
+                        <input type="month" name="mes">
+                    </fieldset>
+                </div> 
+                    
+            </fieldset>
 
-        <footer class="rodape">
-            Copyright &copy; fastfashion.com
-        </footer>
-
-    </main>
-
+            <fieldset>
+                <legend> Produtos</legend>
+                <table align="center" class="tabela" cellpadding="20">
+                    <tr>                        
+                        <td> Web Cam </td>
+                        <td>R$ 300,00 </td>
+                        <td><input type="number" name="quant1" min="0" max="9"></td>
+                        <td><input type="text" name="tot1"></td>
+                    </tr>
+                    <tr>                        
+                        <td> Placa de Vídeo</td>
+                        <td>R$ 700,00 </td>
+                        <td><input type="number" name="quant2" min="0" max="9"></td>
+                        <td><input type="text" name="tot2"></td>
+                    </tr>
+                    <tr>                        
+                        <td>Placa Mãe </td>
+                        <td>R$ 650,00 </td>
+                        <td><input type="number" name="quant3" min="0" max="9"></td>
+                        <td><input type="text" name="tot3"></td>
+                    </tr>
+                    <tr>                        
+                        <td> HD Externo </td>
+                        <td>R$ 299,00 </td>
+                        <td><input type="number" name="quant4" min="0" max="9"></td>
+                        <td><input type="text" name="tot4"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="right">
+                            <h3> Total ➝ R$<output id="total">0,00</output></h3>
+                            <h3> Desconto ➝ R$ <output id="desconto">0,00</output> </h3>
+                            <h3> Valor a Pagar ➝ R$ <output id="valpag">0,00</output> </h3>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            
+            <input type="submit" value="Finalizar">
+            
+        </form>
+    </section>
+    <script src="javascript/script.js"></script>
 </body>
-
 </html>
