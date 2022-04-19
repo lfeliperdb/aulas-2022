@@ -10,6 +10,7 @@ function calculos(form) {
     quant2 = form.quant2.value;
     quant3 = form.quant3.value;
     quant4 = form.quant4.value;
+    quant5 = form.quant5.value;
 
     //processamento
 
@@ -20,9 +21,9 @@ function calculos(form) {
 
     if (pagamento == "dinheiro") {
         perc = 0.15
-    } else [
+    } else {
         perc = 0
-    ]
+    }
 
     total = tot1 + tot2 + tot3 + tot4;
     desconto = total * perc;
