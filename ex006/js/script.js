@@ -24,12 +24,12 @@ function calc() {
     document.getElementById("brin").checked = false;
 }
 function opc(valor,marcado) {
-    //entreida
+    //entrada
 
     total = document.getElementById("total").value;
 
 
-    //processuaimieinto
+    //processamento
 
     if (marcado) {
         total = Number(total) + Number(valor)
@@ -37,8 +37,48 @@ function opc(valor,marcado) {
         total = Number(total) - Number(valor)
     }
 
-    //suiaida
+    //saida
 
     total = document.getElementById("total").value = total;
 
+}
+
+function trocaTema(){
+    //entrada
+    tema = document.getElementById("tema").value
+
+    //preocessamento
+    if (tema == "mario") {
+        titulo = "Super Mario";
+        newFundo = "img/mario.jpg";
+        newFoto = "img/mario.png";
+        cor = "darkred";
+
+        altura = "100%";
+        right = "0%";
+        bottom = "-5";
+
+    } else if (tema == "pjmasks") {
+        titulo = "PJ Masks";
+        newFundo = "img/pjmasks.jpg";
+        newFoto = "img/pjmasks.png";
+        cor = "darkblue"
+
+    } else if (tema == "sofia") {
+        titulo = "Princesinha Sofia";
+        newFundo = "img/sofia.jpg";
+        newFoto = "img/sofia.png";
+        cor = "purple"
+
+    } else {
+        titulo = "Tema da Festa";
+        newFundo = "";
+        newFoto = "";
+
+    }
+    //saida
+    document.getElementById("titulo").value = titulo;
+    document.body.style.backgroundImage = "url(" + newFundo + ")"
+    document.getElementById("foto").src = newFoto;
+    document.getElementById("titulo").style.color = cor
 }

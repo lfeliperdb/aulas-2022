@@ -12,8 +12,11 @@
     <title>Festas Ltda</title>
   </head>
   <body>
+    <div id="imagem">
+      <img id="foto">
+    </div>
     <section class="container" id="conteudo">
-    <h1>Festa</h1>
+    <h1> <output id="titulo">Festa</output> </h1>
     <form class="row g-3" name="form">
         <div class="col-md-6">
           <label for="nome" class="form-label">Nome</label>
@@ -33,11 +36,11 @@
         </div>
         <div class="col-md-6">
           <label for="tema" class="form-label">Tema</label>
-          <select id="tema" class="form-select">
-            <option selected>Ben 10</option>
-            <option selected>Naruto</option>
-            <option selected>Shrek</option>
+          <select id="tema" class="form-select" onchange="trocaTema()">
             <option selected>Selecione...</option>
+            <option value="mario">Super Mario</option>
+            <option value="sofia">Princesinha Sofia</option>
+            <option value="pjmasks">PJ Masks</option>
           </select>
         </div>
         <div class="col-12" id="horario">

@@ -1,14 +1,9 @@
-body {
-    background-color: black;
-    color: white;
-}
-
 #conteudo{
     margin-top: 2%;
     padding: 2%;
-    background-color: rgba(85, 85, 85, 0.7);
+    background-color: rgba(165, 165, 165, 0.7);
     width: 50%;
-    margin-left: 10
+    margin-left: 10%;
 }
 #valor{
     text-align: center;
@@ -16,4 +11,20 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     padding: 15%;
+}
+
+#titulo{
+    text-transform: uppercase;
+}
+
+#imagem img{
+    position: fixed;
+    right: -100px;
+    height: 70%;
+    bottom: 0;
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
