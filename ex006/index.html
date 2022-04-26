@@ -12,9 +12,9 @@
     <title>Festas Ltda</title>
   </head>
   <body>
-    <section class="container" id="conteudo">
+    <section class="container" id="conteudo" onchange="calculos()">
     <h1>Tema da festa</h1>
-    <form class="row g-3" oninput="function calculos(this)">
+    <form class="row g-3">
         <div class="col-md-6">
           <label for="nome" class="form-label">Nome</label>
           <input type="text" class="form-control" id="nome">
@@ -40,7 +40,7 @@
             <option selected>Selecione...</option>
           </select>
         </div>
-        <div class="col-12">
+        <div class="col-12" id="horario">
             Horário da Festa
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="horario" id="manha" value="manha" onchange="calc()">
@@ -59,28 +59,28 @@
         <div class="col-6">
             <P>Opcionais</P>
             <div class="form-check form-switch">
-                <input class="form-check-input" name="quant1" type="checkbox" role="switch" id="guloseimas">
+                <input class="form-check-input" name= "gul" type="checkbox" role="switch" id="guloseimas">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Mesa de Guloseimas</label>
               </div>
               <div class="form-check form-switch">
-                <input class="form-check-input" name="quant2" type="checkbox" role="switch" id="perso">
+                <input class="form-check-input" name= "pers" type="checkbox" role="switch" id="perso">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Personagens</label>
               </div>
               <div class="form-check form-switch">
-                <input class="form-check-input" name="quant3" type="checkbox" role="switch" id="atracoes">
+                <input class="form-check-input" name="atr" type="checkbox" role="switch" id="atracoes">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Atrações</label>
               </div>
               <div class="form-check form-switch">
-                <input class="form-check-input" name="quant4" type="checkbox" role="switch" id="maquiagem">
+                <input class="form-check-input" name="maq" type="checkbox" role="switch" id="maquiagem">
                 <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Maquiagen Infantil</label>
               </div>
               <div class="form-check form-switch">
-                <input class="form-check-input" name="quant5" type="checkbox" role="switch" id="brinde">
+                <input class="form-check-input" name="brin" type="checkbox" role="switch" id="brinde">
                 <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Brindes</label>
               </div>
         </div>
         <div class="col-6" id="valor">
-            R$ <output id="total"></output>
+            R$<output id="total">0,00</output>
         </div>
         <div>
             <button type="button" class="btn btn-primary">Limpar</button>
