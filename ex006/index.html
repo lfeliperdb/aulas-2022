@@ -12,24 +12,24 @@
     <title>Festas Ltda</title>
   </head>
   <body>
-    <section class="container" id="conteudo" onchange="calculos()">
-    <h1>Tema da festa</h1>
-    <form class="row g-3">
+    <section class="container" id="conteudo">
+    <h1>Festa</h1>
+    <form class="row g-3" name="form">
         <div class="col-md-6">
           <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="nome">
+          <input type="text" class="form-control" id="nome" required>
         </div>
         <div class="col-md-6">
           <label for="telefone" class="form-label">Telefone</label>
-          <input type="text" class="form-control" id="telefone">
+          <input type="text" class="form-control" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
         </div>
         <div class="col-12">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="email@dominio.com">
+          <input type="email" class="form-control" id="email" placeholder="email@dominio.com" required>
         </div>
         <div class="col-md-6">
           <label for="data" class="form-label">Data</label>
-          <input type="date" class="form-control" id="data">
+          <input type="date" class="form-control" id="data" required>
         </div>
         <div class="col-md-6">
           <label for="tema" class="form-label">Tema</label>
@@ -41,7 +41,7 @@
           </select>
         </div>
         <div class="col-12" id="horario">
-            Horário da Festa
+            <p>Horário da Festa</p>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="horario" id="manha" value="manha" onchange="calc()">
                 <label class="form-check-label" for="manha">Manhã</label>
@@ -53,34 +53,35 @@
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="horario" id="noite" value="noite" onchange="calc()">
                 <label class="form-check-label" for="noite">Noite</label>
-              </div>
-              <br>
+            </div>
+            <br>
         </div>
         <div class="col-6">
-            <P>Opcionais</P>
+          <P>Opcionais</P>
+          <div class="form-check form-switch">
+              <input class="form-check-input" name= "gul" type="checkbox" role="switch" id="gul" onchange="opc(350,this.checked)">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Mesa de Guloseimas</label>
+            </div>
             <div class="form-check form-switch">
-                <input class="form-check-input" name= "gul" type="checkbox" role="switch" id="guloseimas">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Mesa de Guloseimas</label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" name= "pers" type="checkbox" role="switch" id="perso">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Personagens</label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" name="atr" type="checkbox" role="switch" id="atracoes">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Atrações</label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" name="maq" type="checkbox" role="switch" id="maquiagem">
-                <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Maquiagen Infantil</label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" name="brin" type="checkbox" role="switch" id="brinde">
-                <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Brindes</label>
-              </div>
+              <input class="form-check-input" name= "pers" type="checkbox" role="switch" id="pers" onchange="opc(250,this.checked)">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Personagens</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="atr" type="checkbox" role="switch" id="atr" onchange="opc(300,this.checked)">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Atrações</label>
+            </div>
+            
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="maq" type="checkbox" role="switch" id="maq" onchange="opc(150,this.checked)">
+              <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Maquiagem Infantil</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="brin" type="checkbox" role="switch" id="brin" onchange="opc(100,this.checked)">
+              <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Brindes</label>
+            </div>
         </div>
         <div class="col-6" id="valor">
-            R$<output id="total">0,00</output>
+            R$<output id="total">0</output>,00
         </div>
         <div>
             <button type="button" class="btn btn-primary">Limpar</button>

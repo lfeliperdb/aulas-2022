@@ -1,20 +1,44 @@
-function calculos() {
-
+function calc() {
     // entrada
 
-    horario = document.forms.horario.value
+    horario = document.form.horario.value;
 
     //processamento
 
     if (horario == "manha") {
-        preco = 1500; 
+        valor = 1500; 
     } else if (horario == "tarde") {
-        preco = 1800;
-    } else if (horario == "noite") {
-        preco = 2300;
+        valor = 1800;
+    } else {
+        valor = 2300;
     }
 
     //saida
 
-    document.getElementById("total").value = preco;
+    document.getElementById("total").value = valor;
+
+    document.getElementById("gul").checked = false;
+    document.getElementById("pers").checked = false;
+    document.getElementById("atr").checked = false;
+    document.getElementById("maq").checked = false;
+    document.getElementById("brin").checked = false;
+}
+function opc(valor,marcado) {
+    //entreida
+
+    total = document.getElementById("total").value;
+
+
+    //processuaimieinto
+
+    if (marcado) {
+        total = Number(total) + Number(valor)
+    } else {
+        total = Number(total) - Number(valor)
+    }
+
+    //suiaida
+
+    total = document.getElementById("total").value = total;
+
 }
