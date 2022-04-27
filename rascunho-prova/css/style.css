@@ -1,6 +1,6 @@
 #conteudo{
         margin-top: 2%;
-        padding: 2%;
+        padding: 20px;
         width: 50%;
         margin-left: 10%;
         background: #6A6A6A;
@@ -8,4 +8,14 @@
 }
 body{
     background-color: black;
+}
+#valor{
+    text-align: center;
+    font-size: x-large;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0;
+}
+#titulo{
+    text-transform: uppercase;
 }

@@ -7,21 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Document</title>
+    <title>Prova LTPW</title>
 </head>
 <body>
     <section class="container" id="conteudo">
       <h1> <output id="titulo">Sessão de Cinema</output> </h1> <br>
         <form class="row g-3">
-            <div class="col-md-4">
+            <div class="col-md-7">
               <label for="inputEmail4" class="form-label">Nome</label>
               <input type="email" class="form-control" id="nome">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
               <label for="inputPassword4" class="form-label">Senha</label>
               <input type="password" class="form-control" id="senha">
             </div>
-            <div class="col-10">
+            <div class="col-12">
               <label for="inputAddress" class="form-label">E-mail</label>
               <input type="text" class="form-control" id="EMAIL" placeholder="email@dominio.com">
             </div>
@@ -29,7 +29,7 @@
               <label for="data" class="form-label">Data</label>
               <input type="date" class="form-control" id="DATA">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <label for="tema" class="form-label">Sessão</label>
               <select id="tema" class="form-select" onchange="sessão()">
                 <option selected>Selecione...</option>
@@ -38,33 +38,57 @@
                 <option value="pjmasks">Batman</option>
               </select>
             </div>
+            <div class="col-md-4">
+              <label for="dimensao" class="form-label">Tipo</label>
+              <select id="tema" class="form-select">
+                <option selected>Selecione...</option>
+                <option value="2d">2D</option>
+                <option value="3d">3D</option>
+              </select>
+            </div>
             <div class="col-12" id="horario">
               <br>
               <p>Horário da Sessão</p>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="horario" id="manha" value="manha">
+                  <input class="form-check-input" type="radio" name="horario" id="manha" value="manha" onchange="calc()">
                   <label class="form-check-label" for="manha">08:30 AM</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="horario" id="tarde" value="tarde">
+                  <input class="form-check-input" type="radio" name="horario" id="tarde" value="tarde" onchange="calc()">
                   <label class="form-check-label" for="tarde">15:45 PM</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="horario" id="noite" value="noite">
+                  <input class="form-check-input" type="radio" name="horario" id="noite" value="noite" onchange="calc()">
                   <label class="form-check-label" for="noite">21:00 PM</label>
               </div>
               <br>
             </div>
-            <div class="col-12">
+            <div class="col-6">
+              <p>Combos</p>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onchange="opc(35,this.checked)">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Combo Mega
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" onchange="opc(55,this.checked)">
+                <label class="form-check-label" for="flexCheckChecked">
+                  Combo Mega Duplo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" onchange="opc(70,this.checked)">
+                <label class="form-check-label" for="flexCheckChecked">
+                  Combo Família
                 </label>
               </div>
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Sign in</button>
+            <div class="col-6" id="valor">
+              R$<output id="total">0</output>,00
+          </div>
+            <div class="col-6">
+              <button type="submit" class="btn btn-primary">Prosseguir</button>
             </div>
           </form>
     </section>
