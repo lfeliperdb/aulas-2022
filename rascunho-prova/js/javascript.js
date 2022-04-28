@@ -1,28 +1,44 @@
-function calc() {
+function sessao() {
     // entrada
 
-    horario = document.form.horario.value;
+    tema = document.getElementById("tema").value;
 
     //processamento
 
-    if (horario == "manha") {
-        valor = 1500; 
-    } else if (horario == "tarde") {
-        valor = 1800;
+    if (tema == "strange") {
+        total = 25;
+    } else if (tema == "sonic") {
+        total = 15;
     } else {
-        valor = 2300;
+        total = 20;
     }
 
     //saida
 
-    document.getElementById("total").value = valor;
+    document.getElementById("total").value = total;
 
-    document.getElementById("gul").checked = false;
-    document.getElementById("pers").checked = false;
-    document.getElementById("atr").checked = false;
-    document.getElementById("maq").checked = false;
-    document.getElementById("brin").checked = false;
+    document.getElementById("pipoca").checked = false;
+    document.getElementById("refil").checked = false;
+    document.getElementById("chocolate").checked = false;
 }
+
+function dimensao(){
+    //entrada
+
+    total = document.getElementById("total").value;
+    dimen = document.getElementById("dimen").value;
+
+    //processamento
+
+    if (dimen == "tresd") {
+        total = Number(total) + 15;
+    } 
+
+    // saida
+
+    document.getElementById("total").value = total;
+}
+
 function opc(valor,marcado) {
     //entrada
 
@@ -42,7 +58,10 @@ function opc(valor,marcado) {
     total = document.getElementById("total").value = total;
 
 }
-
+function botao() {
+    return href = "cartao.html"
+}
+/*
 function trocaTema(){
     //entrada
     tema = document.getElementById("tema").value
@@ -81,4 +100,4 @@ function trocaTema(){
     document.body.style.backgroundImage = "url(" + newFundo + ")"
     document.getElementById("foto").src = newFoto;
     document.getElementById("titulo").style.color = cor
-}
+} */
