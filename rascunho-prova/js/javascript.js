@@ -13,6 +13,29 @@ function sessao() {
         total = 20;
     }
 
+    if (tema == "batman") {
+        titulo = "Batman";
+        newFundo = "img/batman.jpg";
+        cor = "dark";
+        
+        altura = "100%";
+        right = "0%";
+        bottom = "-5";
+        
+    } else if (tema == "strange") {
+        titulo = "Dr. Estranho";
+        newFundo = "img/strange.jpg";
+        cor = "darkred"
+        
+    } else if (tema == "sonic") {
+        titulo = "Sonic";
+        newFundo = "img/sonic.jpg";
+        cor = "darkblue"
+        
+    } else {
+        titulo = "Sessão de Cinema";
+        newFundo = ""; }
+
     //saida
 
     document.getElementById("total").value = total;
@@ -20,6 +43,12 @@ function sessao() {
     document.getElementById("pipoca").checked = false;
     document.getElementById("refil").checked = false;
     document.getElementById("chocolate").checked = false;
+
+    document.getElementById("titulo").value = titulo;
+    document.body.style.backgroundImage = "url(" + newFundo + ")"
+        
+    document.getElementById("titulo").style.color = cor 
+
 }
 
 function dimensao(){
@@ -61,43 +90,3 @@ function opc(valor,marcado) {
 function botao() {
     return href = "cartao.html"
 }
-/*
-function trocaTema(){
-    //entrada
-    tema = document.getElementById("tema").value
-
-    //preocessamento
-    if (tema == "mario") {
-        titulo = "Super Mario";
-        newFundo = "img/mario.jpg";
-        newFoto = "img/mario.png";
-        cor = "darkred";
-
-        altura = "100%";
-        right = "0%";
-        bottom = "-5";
-
-    } else if (tema == "pjmasks") {
-        titulo = "PJ Masks";
-        newFundo = "img/pjmasks.jpg";
-        newFoto = "img/pjmasks.png";
-        cor = "darkblue"
-
-    } else if (tema == "sofia") {
-        titulo = "Princesinha Sofia";
-        newFundo = "img/sofia.jpg";
-        newFoto = "img/sofia.png";
-        cor = "purple"
-
-    } else {
-        titulo = "Tema da Festa";
-        newFundo = "";
-        newFoto = "";
-
-    }
-    //saida
-    document.getElementById("titulo").value = titulo;
-    document.body.style.backgroundImage = "url(" + newFundo + ")"
-    document.getElementById("foto").src = newFoto;
-    document.getElementById("titulo").style.color = cor
-} */

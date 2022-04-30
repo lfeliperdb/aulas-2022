@@ -10,6 +10,8 @@
     <title>Prova LTPW</title>
 </head>
 <body>
+  <div id="imagem">
+    <img id="foto">
     <section class="container" id="conteudo">
       <h1> <output id="titulo">Sessão de Cinema</output> </h1> <br>
         <form class="row g-3">
@@ -27,7 +29,7 @@
             </div>
             <div class="col-4">
               <label for="data" class="form-label">Data</label>
-              <input type="date" class="form-control" id="DATA">
+              <input type="date" class="form-control" id="DATA" required>
             </div>
             <div class="col-md-4">
               <label for="tema" class="form-label">Sessão</label>
@@ -66,8 +68,8 @@
               <br>
             </div>
             <div class="col-6">
-              <p>Combos</p>
-              <div class="form-check">
+              <p>Adicionais</p>
+              <div class="form-check" required>
                 <input class="form-check-input" type="checkbox" value="" id="pipoca" onchange="opc(40,this.checked)">
                 <label class="form-check-label" for="pipoca">
                   Pipoca
