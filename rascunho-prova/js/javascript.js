@@ -16,7 +16,7 @@ function sessao() {
     if (tema == "batman") {
         titulo = "Batman";
         newFundo = "img/batman.jpg";
-        cor = "dark";
+        cor = "black";
         
         altura = "100%";
         right = "0%";
@@ -32,9 +32,11 @@ function sessao() {
         newFundo = "img/sonic.jpg";
         cor = "darkblue"
         
-    } else {
+    } else if (tema == "") {
         titulo = "Sessão de Cinema";
-        newFundo = ""; }
+        newFundo = "";
+        cor = "black";
+    }
 
     //saida
 
