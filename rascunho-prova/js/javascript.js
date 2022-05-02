@@ -87,8 +87,4 @@ function opc(valor,marcado) {
     //saida
 
     total = document.getElementById("total").value = total;
-
-}
-function botao() {
-    return href = "cartao.html"
 }

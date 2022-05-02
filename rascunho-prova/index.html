@@ -15,21 +15,25 @@
     <section class="container" id="conteudo">
       <h1> <output id="titulo">Sessão de Cinema</output> </h1> <br>
         <form class="row g-3">
-            <div class="col-md-7">
+            <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Nome</label>
               <input type="text" class="form-control" id="nome" required>
             </div>
-            <div class="col-md-5">
-              <label for="inputPassword4" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="senha" required>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="email@dominio.com" required>
             </div>
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">E-mail</label>
-              <input type="email" class="form-control" id="EMAIL" placeholder="email@dominio.com" required>
+            <div class="col-6">
+              <label for="inputAddress" class="form-label">Senha</label>
+              <input type="password" class="form-control" name="senha1" form="senha1" id="senha1"required>
+            </div>
+            <div class="col-6">
+              <label for="inputAddress" class="form-label">Confirma Senha</label>
+              <input type="password" class="form-control" name="senha2" form="senha2" id="senha2" required>
             </div>
             <div class="col-4">
               <label for="data" class="form-label">Data</label>
-              <input type="date" class="form-control" id="DATA" required>
+              <input type="date" class="form-control" id="data" required>
             </div>
             <div class="col-md-4">
               <label for="tema" class="form-label">Sessão</label>
